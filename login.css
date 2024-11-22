@@ -1,67 +1,52 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #000000;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
-.box{
-    width: 300px;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: white;
-    transform: translate(-50%,-50%);
-    background: #191919;
-    text-align: center;
-    border-radius: 14em;
-    box-shadow: 5px 5px 50px 50px rgba(252, 5, 5, 0.699);
-    animation: animateBg 5s linear infinite;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
 }
-
-@keyframes animateBg{
-    100% {
-        filter: hue-rotate(360deg);
-    }
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
-
-.box input{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 3px solid #0399fd;
-    padding: 14px 10px;
-    width: 200px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
 }
-
-.box input[type = "text"]:focus,.box input[type = "password"]:focus{
-    width: 280px;
-    border-color: #04fb6b;
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
 }
-
-.box input[type = "submit"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 25px;
-    border: 3px solid #04fb6b;
-    padding: 14px 40px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
 }
-
-.box input[type="submit"]:hover {
-    background: #04fb6b;
+.buttons button:active {
+  transform: scale(0.99);
+}
+.operator {
+  color: #f75e06;
 }
